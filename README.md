@@ -1,2 +1,2 @@
-# css-components
-A library of CSS components for use throughout projects at Insight Creative, Inc.
+# hugo-recipes
+A collection of recipes to use when building Hugo websites

@@ -1,0 +1,20 @@
+.card {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
+  border-radius: 0.5rem;
+
+  &__image {
+    max-height: 300px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+  }
+
+  &__body {
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+}

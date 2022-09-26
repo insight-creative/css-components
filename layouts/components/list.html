@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "hero" . }}
+<div class="block">
+    <div class="wrapper">
+        {{ $recipes := where .Site.RegularPages "Section" "recipes" }}
+        <ol>
+            {{ range $recipes }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ol>
+    </div>
+    <div class="wrapper">
+        {{ partial "blog/custom-pagination.html" . }}
+    </div>
+</div>
+{{ end }}

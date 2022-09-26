@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "hero" . }}
+<div class="block">
+    <div class="post-content wrapper flow">
+        {{ .Content  }}
+        {{ partial "blog/share-buttons" . }}
+        {{ partial "blog/post-navigation" . }}
+    </div>
+</div>
+{{ end }}
