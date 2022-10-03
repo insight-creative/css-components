@@ -9,18 +9,25 @@
 <div class="block">
     <div class="wrapper">
         <h1>The Recipes</h1>
-        {{ $recipes := where .Site.RegularPages "Section" "components" }}
-        <ol>
-            {{ range $recipes }}
-            <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
-            {{ end }}
-        </ol>
-        <div class="grid-3">
-            {{ partial "components/card" . }}
-            {{ partial "components/card" . }}
-            {{ partial "components/card" . }}
+    </div>
+    <div class="block">
+        <div class="wrapper">
+            <h2>Card</h2>
+            <div class="grid-3">
+                {{ partial "components/card" . }}
+                {{ partial "components/card" . }}
+                {{ partial "components/card" . }}
+            </div>
+        </div>
+    </div>
+    <div class="block bg-black">
+        <div class="wrapper">
+            <h2>Equal Height Columns</h2>
+            <div class="flex">
+                {{ partial "components/columns" . }}
+                {{ partial "components/columns" . }}
+                {{ partial "components/columns" . }}
+            </div>
         </div>
     </div>
 </div>
