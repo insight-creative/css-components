@@ -1,0 +1,13 @@
+.demo-container {
+    position: relative;
+    padding: $ic-600 $ic-300;
+    overflow: auto;
+    resize: horizontal;
+
+    &__resize {
+        position: absolute;
+        bottom: .5rem;
+        right: .5rem;
+        font-size: 12px;
+    }
+}
