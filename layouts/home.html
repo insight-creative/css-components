@@ -1,32 +1,23 @@
 {{ define "main" }}
 <div class="block bg-black">
     <div class="wrapper flow">
-        <h1>Hugo Recipes</h1>
-        <p>Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</p>
-        <p>There are a lot of great <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> resources out there, but it can be overwhelming as you figure out where to start. hugo.recipes is a collection of recipes that were either a struggle to find when starting with Hugo, or things that we often find ourselves searching for when working on client projects.</p>
+        <h1>CSS Components</h1>
+        <h2>A collection of popular layouts and patterns made with CSS</h2>
     </div>
 </div>
 <div class="block">
-    <div class="wrapper">
-        <h1>The Recipes</h1>
-    </div>
     <div class="block">
         <div class="wrapper">
-            <h2>Card</h2>
-            <div class="grid-3">
-                {{ partial "components/card" . }}
-                {{ partial "components/card" . }}
-                {{ partial "components/card" . }}
-            </div>
-        </div>
-    </div>
-    <div class="block bg-black">
-        <div class="wrapper">
-            <h2>Equal Height Columns</h2>
-            <div class="flex">
-                {{ partial "components/columns" . }}
-                {{ partial "components/columns" . }}
-                {{ partial "components/columns" . }}
+            <div class="components bg-black grid-4">
+                {{ $components := where .Site.RegularPages "Section" "components" }}
+                {{ range $components }}
+                    <div class="component">
+                        <a href="{{ .Permalink }}" class="flow">
+                            {{ .Params.html | safeHTML }}
+                            <h2 class="h5 text-center">{{ .Title }}</h2>
+                        </a>
+                    </div>
+                {{ end }}
             </div>
         </div>
     </div>

@@ -5,6 +5,23 @@ seo:
   meta_description:
   featured_image:
   featured_image_alt:
+html: >-
+  <div class="card">
+    <!-- A card with featured image -->
+    <div class="card__image">
+        <img src="https://source.unsplash.com/random/800x600" alt="">
+    </div>
+    <!-- A card with given width -->
+    <div class="card__body">
+      <div class="lines">
+        <div class="line line-80"></div>
+        <div class="line line-80"></div>
+        <div class="line line-80"></div>
+        <div class="line line-80"></div>
+        <div class="line line-20"></div>
+      </div>
+    </div>
+  </div>
 date: 2022-09-26
 categories:
   - Display
@@ -51,7 +68,7 @@ SCSS
 }
 ```
 
-CSS 
+CSS
 
 ```
 .card {

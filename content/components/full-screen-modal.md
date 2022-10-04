@@ -6,6 +6,8 @@ seo:
   featured_image:
   featured_image_alt:
 date: 2022-10-03
+html: >-
+  <div>Test</div>
 categories:
   - Display
 ---
@@ -16,7 +18,7 @@ HTML
 <div class="modal">
     <!-- The close button -->
     <button type="button" class="modal__close" aria-label="Close modal"></button>
-    
+
     <!-- The navigation menu -->
     <div class="modal__content">
         ...
