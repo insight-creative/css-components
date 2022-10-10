@@ -23,6 +23,7 @@ module.exports = {
         'search',
         'pre',
         'code',
+        'logo-grid'
       ],
     }),
   ],
