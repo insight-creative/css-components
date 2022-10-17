@@ -2,6 +2,15 @@
     padding: $ic--100;
     border-bottom: 1px solid $brand-black;
 
+    a {
+        color: $white;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     @include breakpoint(sm) {
         border-right: 1px solid $brand-black;
     }

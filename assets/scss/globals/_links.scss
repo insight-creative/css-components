@@ -9,7 +9,7 @@ a {
   }
 }
 
-.site-main a:not(.btn):not(.breadcrumbs__link):not(.card):not(.card a):not(.share-buttons__link) {
+.site-main a:not(.btn, .breadcrumbs__link, .card, .card a, .share-buttons__link, .component a ) {
   color: $white;
   text-decoration: none;
   background-image: linear-gradient($tertiary-color, $tertiary-color),linear-gradient(270deg,$primary-color 0%,$primary-color 100%);
