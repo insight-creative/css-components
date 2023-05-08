@@ -1,10 +1,36 @@
 {{ define "main" }}
 {{ partial "hero" . }}
+
+{{ $htmlExamples := .Params.htmlExamples }}
+{{ $cssExamples := .Params.cssExamples }}
+{{ range $index, $htmlExample := $htmlExamples }}
+    {{ $cssExample := index $cssExamples $index }}
+
+    <div class="component">
+        <div class="component__preview" id="preview-{{ $index }}">
+            {{ $htmlExample | safeHTML }}
+        </div>
+
+        <div class="component__code">
+            <button class="component__code-btn" data-index="{{ $index }}" data-type="preview">Preview</button>
+            <button class="component__code-btn" data-index="{{ $index }}" data-type="html">HTML</button>
+            <button class="component__code-btn" data-index="{{ $index }}" data-type="css">CSS</button>
+            <button class="component__code-btn" data-index="{{ $index }}" data-type="copy-html">Copy HTML</button>
+            <button class="component__code-btn" data-index="{{ $index }}" data-type="copy-css">Copy CSS</button>
+
+            <pre id="htmlCode-{{ $index }}" class="component__code-html" style="display:none;"><code>{{ $htmlExample }}</code></pre>
+            <pre id="cssCode-{{ $index }}" class="component__code-css" style="display:none;"><code>{{ $cssExample }}</code></pre>
+        </div>
+    </div>
+{{ end }}
+
+
+
+
+
 <div class="block">
     <div class="post-content wrapper flow">
         {{ .Content  }}
-        {{ partial "blog/share-buttons" . }}
-        {{ partial "blog/post-navigation" . }}
     </div>
 </div>
 {{ end }}

@@ -13,18 +13,10 @@ table {
   }
 
   td {
-    border-right: 2px solid $light-gray;
+    border: 1px solid rgba($dark-black, 0.4);
   }
 
   tr:nth-child(even) {
     background-color: $light-gray;
-
-    td {
-      border-right: 2px solid $white;
-    }
-  }
-
-  tr td:nth-child(even) {
-    border-right: none;
   }
 }

@@ -18,9 +18,8 @@ table,
 }
 
 body {
-  background-color: $body-black;
   font-family: $primary-font;
-  color: $light-gray;
+  color: $dark-black;
 }
 
 :focus {
@@ -34,6 +33,7 @@ main:focus {
 
 .site-main {
   position: relative;
+  margin-top: $mobile-header;
 
   @include breakpoint(md) {
     margin-top: $desktop-header;
