@@ -1,59 +1,49 @@
 console.log('%c Crafted by Insight Creative, Inc. Designed and Developed by Justin Parsons', 'background: #1d1d1d; color: white; padding: 5px 10px;')
 
-function copyToClipboard(text) {
-  const textarea = document.createElement("textarea");
-  textarea.value = text;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-  const copyHtmlButtons = document.querySelectorAll("[id^=copyHtmlBtn]");
-  const copyCssButtons = document.querySelectorAll("[id^=copyCssBtn]");
+  // Get all the buttons in the components
+  var buttons = document.querySelectorAll(".component__code-btn");
 
-  copyHtmlButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-          const htmlExample = button.getAttribute("data-html-example");
-          copyToClipboard(htmlExample);
-      });
-  });
+  // Loop through each button
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      // Get the index and type from the button's data attributes
+      var index = this.dataset.index;
+      var type = this.dataset.type;
 
-  copyCssButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-          const cssExample = button.getAttribute("data-css-example");
-          copyToClipboard(cssExample);
-      });
-  });
-});
+      // Get the code blocks for the current index
+      var preview = document.getElementById("preview-" + index);
+      var htmlCode = document.getElementById("htmlCode-" + index);
+      var cssCode = document.getElementById("cssCode-" + index);
 
-document.querySelectorAll('.component__code-btn').forEach(function (button) {
-  button.addEventListener('click', function () {
-      const index = this.getAttribute('data-index');
-      const type = this.getAttribute('data-type');
-      const preview = document.getElementById('preview-' + index);
-      const htmlCode = document.getElementById('htmlCode-' + index);
-      const cssCode = document.getElementById('cssCode-' + index);
-
-      if (type === 'preview') {
-          preview.style.display = 'block';
-          htmlCode.style.display = 'none';
-          cssCode.style.display = 'none';
-      } else if (type === 'html') {
-          preview.style.display = 'none';
-          htmlCode.style.display = 'block';
-          cssCode.style.display = 'none';
-      } else if (type === 'css') {
-          preview.style.display = 'none';
-          htmlCode.style.display = 'none';
-          cssCode.style.display = 'block';
-      } else if (type === 'copy-html') {
-          copyToClipboard(htmlCode.textContent);
-      } else if (type === 'copy-css') {
-          copyToClipboard(cssCode.textContent);
+      // Based on the type, show/hide code blocks and copy code to clipboard
+      switch(type) {
+        case "preview":
+          preview.style.display = "block";
+          htmlCode.style.display = "none";
+          cssCode.style.display = "none";
+          break;
+        case "html":
+          preview.style.display = "none";
+          htmlCode.style.display = "block";
+          cssCode.style.display = "none";
+          break;
+        case "css":
+          preview.style.display = "none";
+          htmlCode.style.display = "none";
+          cssCode.style.display = "block";
+          break;
+        case "copy-html":
+          navigator.clipboard.writeText(htmlCode.textContent);
+          break;
+        case "copy-css":
+          navigator.clipboard.writeText(cssCode.textContent);
+          break;
       }
+    });
   });
 });
+
+
 
 

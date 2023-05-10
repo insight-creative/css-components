@@ -1,54 +1,35 @@
 {{ define "main" }}
 {{ partial "hero" . }}
+    {{ $currentPage := . }}
+    {{ range $index, $page := .Site.Pages }}
+        {{ if eq $page.Type "components" }}
+            {{ $htmlExamples := $page.Params.htmlExamples }}
+            {{ $cssExamples := $page.Params.cssExamples }}
+            {{ range $index, $htmlExample := $htmlExamples }}
+                {{ $cssExample := index $cssExamples $index }}
 
-    {{ if and (isset .Params "htmlExamples") (isset .Params "cssExamples") }}
-        {{ range $index, $htmlExample := .Params.htmlExamples }}
-            {{ $cssExample := index .Params.cssExamples $index }}
-
-            <div class="component">
-                {{ $htmlExample | safeHTML }}
-
-                <div class="component__code">
-                    <button id="htmlBtn-{{ $index }}" class="component__code-btn">HTML</button>
-                    <button id="cssBtn-{{ $index }}" class="component__code-btn">CSS</button>
-                    <button id="copyHtmlBtn-{{ $index }}" class="component__code-btn">Copy HTML</button>
-                    <button id="copyCssBtn-{{ $index }}" class="component__code-btn">Copy CSS</button>
-
-                    <div id="htmlCode-{{ $index }}" class="component__code-html">
-                        <pre><code>{{ $htmlExample }}</code></pre>
-                    </div>
-                    <div id="cssCode-{{ $index }}" class="component__code-css" style="display:none;">
-                        <pre><code>{{ $cssExample }}</code></pre>
+                <div class="block bg-black-2">
+                    <div class="wrapper-lg">
+                        <div class="component">
+                            <div class="component__header flex flex-justify-between">
+                                <h2 class="h3 text-color-white">{{ $page.Title }}</h2>
+                                <div class="component__code">
+                                    <button class="component__code-btn" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="preview">Preview</button>
+                                    <button class="component__code-btn" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="html">HTML</button>
+                                    <button class="component__code-btn" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="css">CSS</button>
+                                    <button class="component__code-btn" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="copy-html">Copy HTML</button>
+                                    <button class="component__code-btn" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="copy-css">Copy CSS</button>
+                                </div>
+                            </div>
+                            <div class="component__preview bg-black" id="preview-{{ $currentPage.Title }}-{{ $index }}">
+                                {{ $htmlExample | safeHTML }}
+                            </div>
+                            <pre class="component__code-html bg-black text-color-white" id="htmlCode-{{ $currentPage.Title }}-{{ $index }}" style="display:none;"><code>{{ $htmlExample }}</code></pre>
+                            <pre class="component__code-css bg-black text-color-white" id="cssCode-{{ $currentPage.Title }}-{{ $index }}" style="display:none;"><code>{{ $cssExample }}</code></pre>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <script>
-                document.getElementById("htmlBtn-{{ $index }}").addEventListener("click", function() {
-                    document.getElementById("htmlCode-{{ $index }}").style.display = "block";
-                    document.getElementById("cssCode-{{ $index }}").style.display = "none";
-                });
-
-                document.getElementById("cssBtn-{{ $index }}").addEventListener("click", function() {
-                    document.getElementById("htmlCode-{{ $index }}").style.display = "none";
-                    document.getElementById("cssCode-{{ $index }}").style.display = "block";
-                });
-
-                document.getElementById("copyHtmlBtn-{{ $index }}").addEventListener("click", function() {
-                    copyToClipboard('{{ $htmlExample }}');
-                });
-
-                document.getElementById("copyCssBtn-{{ $index }}").addEventListener("click", function() {
-                    copyToClipboard('{{ $cssExample }}');
-                });
-            </script>
+            {{ end }}
         {{ end }}
     {{ end }}
-
-<div class="block">
-    <div class="post-content wrapper flow">
-        {{ .Content  }}
-        {{ partial "blog/share-buttons" . }}
-        {{ partial "blog/post-navigation" . }}
-    </div>
-</div>
 {{ end }}

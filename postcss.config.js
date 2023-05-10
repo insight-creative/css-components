@@ -23,7 +23,10 @@ module.exports = {
         'search',
         'pre',
         'code',
-        'logo-grid'
+        'logo-grid',
+        'btn',
+        'btn--secondary',
+        'btn--category',
       ],
     }),
   ],

@@ -1,33 +1,37 @@
-.component {
-    padding: $ic--100;
-    border-bottom: 1px solid $brand-black;
-
-    a {
-        color: $white;
-        text-decoration: none;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    @include breakpoint(sm) {
-        border-right: 1px solid $brand-black;
-    }
+.component__preview {
+    padding: $ic-500 $ic-300;
 }
 
-@include breakpoint(sm) {
-    .component:nth-child(2n) {
-        border-right: none;
-    }
-}
+// .component {
+//     padding: $ic--100;
+//     border-bottom: 1px solid $brand-black;
 
-@include breakpoint(md) {
-    .component:nth-child(2n) {
-        border-right: 1px solid $brand-black;
-    }
+//     a {
+//         color: $white;
+//         text-decoration: none;
+//         height: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//     }
 
-    .component:nth-child(4n) {
-        border-right: none;
-    }
-}
+//     @include breakpoint(sm) {
+//         border-right: 1px solid $brand-black;
+//     }
+// }
+
+// @include breakpoint(sm) {
+//     .component:nth-child(2n) {
+//         border-right: none;
+//     }
+// }
+
+// @include breakpoint(md) {
+//     .component:nth-child(2n) {
+//         border-right: 1px solid $brand-black;
+//     }
+
+//     .component:nth-child(4n) {
+//         border-right: none;
+//     }
+// }
