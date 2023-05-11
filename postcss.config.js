@@ -27,6 +27,8 @@ module.exports = {
         'btn',
         'btn--secondary',
         'btn--category',
+        'hero',
+        'flow',
       ],
     }),
   ],

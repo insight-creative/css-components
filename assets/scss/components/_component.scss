@@ -2,6 +2,12 @@
     padding: $ic-500 $ic-300;
 }
 
+.component__controls {
+    background-color: $dark-black;
+    height: 100%;
+    padding: .3rem;
+}
+
 // .component {
 //     padding: $ic--100;
 //     border-bottom: 1px solid $brand-black;

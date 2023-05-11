@@ -1,9 +1,9 @@
 {{ define "main" }}
 {{ partial "hero" . }}
-    {{ $htmlExamples := .Params.htmlExamples }}
-    {{ $cssExamples := .Params.cssExamples }}
-    {{ range $index, $htmlExample := $htmlExamples }}
-        {{ $cssExample := index $cssExamples $index }}
+    {{ $htmlExample := .Params.htmlExample }}
+    {{ $cssExample := .Params.cssExample }}
+    {{ range $index, $htmlExample := $htmlExample }}
+        {{ $cssExample := index $cssExample $index }}
 
         <div class="component">
             <div class="component__preview" id="preview-{{ $index }}">
@@ -17,7 +17,7 @@
                 <button class="component__code-btn" data-index="{{ $index }}" data-type="copy-html">Copy HTML</button>
                 <button class="component__code-btn" data-index="{{ $index }}" data-type="copy-css">Copy CSS</button>
 
-                <pre id="htmlCode-{{ $index }}" class="component__code-html" style="display:none;"><code>{{ $htmlExample }}</code></pre>
+                <pre id="htmlCode-{{ $index }}" class="component__code-html language-html" style="display:none;"><code>{{ $htmlExample }}</code></pre>
                 <pre id="cssCode-{{ $index }}" class="component__code-css" style="display:none;"><code>{{ $cssExample }}</code></pre>
             </div>
         </div>

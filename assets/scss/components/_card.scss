@@ -10,19 +10,19 @@
 
   &:hover, 
   &:focus {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
 
-      .card__overlay {
-          opacity: 1;
-      }
+    .card__overlay {
+        opacity: 1;
+    }
 
-      .card__img {
-        transform: scale(1.1);
-      }
+    .card__img {
+      transform: scale(1.1);
+    }
 
-      .service-card__underline {
-          transform: scaleX(1.5);
-      }
+    .service-card__underline {
+        transform: scaleX(1.5);
+    }
   }
 }
 
@@ -46,28 +46,13 @@
 .card__image-wrap {
   position: relative;
   width: 100%;
-  height: 250px;
+  aspect-ratio: 3/2;
 }
 
 .card__img {
-  block-size: 250px;
   inline-size: 100%;
   object-fit: cover;
   transition: $transition;
-}
-
-.card__link::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 7;
-  height: 100%;
-  width: 100%;
-  content: "";
-}
-
-.card__content {
-  padding: $ic-200;
 }
 
 .card__overlay {
@@ -81,4 +66,18 @@
   background: linear-gradient(109.95deg, rgba(0, 0, 0, 0.15) 0%, rgba($primary-color, 0.5) 100%);
   opacity: 0;
   transition: opacity .3s ease-in-out;
+}
+
+.card__content {
+  padding: $ic-200;
+}
+
+.card__link::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  height: 100%;
+  width: 100%;
+  content: "";
 }

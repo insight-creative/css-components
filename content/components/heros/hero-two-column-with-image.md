@@ -1,8 +1,8 @@
 ---
-title: Blog Card
+title: Two Column Hero With Image
 component: "cards"
 seo:
-  page_title: Blog Card
+  page_title: Two Column Hero With Image
   meta_description:
   featured_image: /uploads/featured-image.jpg
   featured_image_alt:
@@ -14,21 +14,20 @@ hero:
     image_alt:
 html_example:
   - |
-    <article class="card flex flex-column">
-        <div class="card__meta">
-            <a href="#" class="btn btn--secondary btn--category" aria-label="View all example posts">example</a>
-        </div>
-        <div class="card__image-wrap cover-image">
-            <img src="https://source.unsplash.com/random/800x600?space" alt="" class="card__img">
-            <div class="card__overlay">
-                <div class="btn btn--secondary" aria-label="">Read More</div>
+    <section class="hero block" aria-labelledby="hero-heading">
+        <div class="wrapper-lg columns gap-xl">
+            <div class="hero__content col flow">
+                <div>
+                    <h1 class="hero__heading" id="hero-heading">Hero Heading</h1>
+                </div>
+                <div class="hero__body flow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <a class="btn btn--primary" href="/contact/">Contact Us</a>
+            </div>
+            <div class="col p-relative">
+                <img src="https://source.unsplash.com/random/800x600?space" alt="" width="1200" height="800">
             </div>
         </div>
-        <div class="card__content flow">
-            <h3 class="h4"><a class="card__link no-decoration" href="#">Blog Title</a></h3>
-            <div class="card__summary font-size-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices neque ornare aenean euismod elementum.</div>
-        </div>
-    </article>
+    </section>
 css_example:
   - |
     .card {

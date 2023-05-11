@@ -1,6 +1,6 @@
 <div class="block bg-black">
   <div class="wrapper-lg text-color-white">
-      <h1 class="no-margin">{{ .Title }}</h1>
+      <h1 class="no-margin">{{ if .Params.hero.heading }}{{ .Params.hero.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
       <p>{{ .Params.hero.body }}</p>
   </div>
 </div>

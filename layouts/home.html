@@ -1,25 +1,37 @@
 {{ define "main" }}
-<div class="block bg-black">
-    <div class="wrapper flow">
-        <h1>CSS Components</h1>
-        <h2>A collection of popular layouts and patterns made with CSS</h2>
-    </div>
-</div>
-<div class="block">
-    <div class="block">
-        <div class="wrapper">
-            <div class="components bg-black grid-4">
-                {{ $components := where .Site.RegularPages "Section" "components" }}
-                {{ range $components }}
-                    <div class="component">
-                        <a href="{{ .Permalink }}" class="flow">
-                            {{ .Params.html | safeHTML }}
-                            <h2 class="h5 text-center">{{ .Title }}</h2>
-                        </a>
+{{ partial "hero" . }}
+    {{ $currentPage := . }}
+    {{ range $index, $page := .Site.Pages }}
+        {{ if eq $page.Type "components" }}
+            {{ $htmlExample := $page.Params.html_example }}
+            {{ $cssExample := $page.Params.css_example }}
+            {{ range $index, $htmlExample := $htmlExample }}
+                {{ $cssExample := index $cssExample $index }}
+
+                <div class="block bg-black-2">
+                    <div class="wrapper-lg">
+                        <div class="component">
+                            <div class="component__header flex flex-justify-between">
+                                <h2 class="h3 text-color-white">{{ $page.Title }}</h2>
+                                <div class="component__controls">
+                                    <button class="btn btn--component-control btn--active" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="preview">Preview</button>
+                                    <button class="btn btn--component-control" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="html">HTML</button>
+                                    <button class="btn btn--component-control" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="css">SCSS</button>
+                                    <button class="btn btn--component-control" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="copy-html">Copy HTML</button>
+                                    <button class="btn btn--component-control" data-index="{{ $currentPage.Title }}-{{ $index }}" data-type="copy-css">Copy SCSS</button>
+                                </div>
+                            </div>
+                            <div class="component__preview bg-black" id="preview-{{ $currentPage.Title }}-{{ $index }}">
+                                {{ $htmlExample | safeHTML }}
+                            </div>
+                            <pre class="component__code-html language-html bg-black text-color-white" id="htmlCode-{{ $currentPage.Title }}-{{ $index }}" style="display:none;"><code>{{ $htmlExample }}</code></pre>
+                            <pre class="component__code-css language-css bg-black text-color-white" id="cssCode-{{ $currentPage.Title }}-{{ $index }}" style="display:none;"><code>{{ $cssExample }}</code></pre>
+                        </div>
                     </div>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-</div>
+                    <div class="copy-success-message bg-black text-color-white" id="copy-success-message" style="display:none;">Copied to clipboard!</div>
+                </div>
+            {{ end }}
+        {{ end }}
+    {{ end }}
 {{ end }}
+

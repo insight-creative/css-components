@@ -28,6 +28,8 @@
     {{ $postcss := $scss | resources.PostCSS | minify }}
     <link rel="stylesheet" href="{{ $postcss.Permalink }}">
 
+    <link href="/libs/prism/prism.css" rel="stylesheet">
+
     {{ "<!--Favicon-->" | safeHTML }}
     <link rel="icon" href="/uploads/favicon.svg">
     <link rel="mask-icon" href="mask-icon.svg" color="#000000">
