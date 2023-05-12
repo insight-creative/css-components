@@ -1,6 +1,6 @@
 ---
 title: Two Column Hero With Image
-component: "heros"
+component: "cards"
 seo:
   page_title: Two Column Hero With Image
   meta_description:
@@ -14,7 +14,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <section class="hero block" aria-labelledby="hero-heading">
+    <section class="hero hero--image block" aria-labelledby="hero-heading">
         <div class="wrapper-lg columns gap-xl">
             <div class="hero__content col flow">
                 <h1 class="hero__heading" id="hero-heading">Hero Heading</h1>
@@ -42,7 +42,7 @@ css_example:
         margin: auto 0;
     }
 
-    .hero__image img {
+    .hero--image .hero__image img {
         aspect-ratio: 3/2;
         width: 100%;
         object-fit: cover;
