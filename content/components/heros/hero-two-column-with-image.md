@@ -1,6 +1,6 @@
 ---
 title: Two Column Hero With Image
-component: "cards"
+component: "heros"
 seo:
   page_title: Two Column Hero With Image
   meta_description:
