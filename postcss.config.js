@@ -32,6 +32,7 @@ module.exports = {
         'mt-4',
         'hero--background-image',
         'hero--image',
+        'text-style-slub',
       ],
     }),
   ],
