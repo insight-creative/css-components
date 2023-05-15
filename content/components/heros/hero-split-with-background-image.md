@@ -14,7 +14,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <div class="hero--split-hero columns">
+    <section class="hero--split-hero columns" aria-labelledby="hero-heading">
       <div class="hero__content col">
         <div class="wrapper-sm text-color-white flow">
           <h1 id="hero-heading">Hero Heading</h1>
@@ -33,7 +33,7 @@ html_example:
           <img src="https://source.unsplash.com/random/800x800?space" alt="" width="1800" height="600">
         </picture>
       </div>
-    </div>
+    </section>
 css_example:
   - |
     .hero--split-hero {
@@ -46,7 +46,12 @@ css_example:
       margin: auto 0;
     }
 
+    .hero--split-hero .hero__image {
+      position: relative;
+    }
+
     .hero--split-hero .hero__image img {
+      position: absolute;
       aspect-ratio: 1/1;
       width: 100%;
       height: 100%;

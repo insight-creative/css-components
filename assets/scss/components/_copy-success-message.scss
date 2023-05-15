@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 100px;
   left: 50%;
+  z-index: 9;
   transform: translateX(-50%);
   padding: $ic-200;
   box-shadow: 0 8px 16px rgba(0, 0, 0, .45); 

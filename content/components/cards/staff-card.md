@@ -14,7 +14,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <article class="card flex flex-column">
+    <article class="card card--staff flex flex-column">
         <div class="card__image-wrap cover-image">
             <img src="https://source.unsplash.com/random/800x600?person" alt="" class="card__img">
         </div>
@@ -62,13 +62,6 @@ css_example:
         width: 75%;
         height: 10px;
         background-color: #92981b;
-    }
-
-    .card__meta {
-        position: absolute;
-        top: -18px;
-        left: 0;
-        z-index: 2;
     }
 
     .card__image-wrap {
