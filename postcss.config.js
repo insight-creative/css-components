@@ -33,6 +33,7 @@ module.exports = {
         'hero--background-image',
         'hero--image',
         'text-style-slub',
+        'header__hamburger',
       ],
     }),
   ],
