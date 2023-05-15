@@ -157,41 +157,6 @@
   }
 }
 
-.collapse {
-  @include breakpoint(md) {
-    animation: collapse 0.5s ease forwards;
-  }
-}
-
-// Open nav bar on scroll up
-.expand {
-  @include breakpoint(md) {
-    animation: expand 0.5s ease forwards;
-  }
-}
-
-@keyframes collapse {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes expand {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .nav-open {
   transform: translateX(0);
   opacity: 1;
@@ -199,6 +164,7 @@
   visibility: visible;
 }
 
+// Start of CSS specific to the simple header demo
 .header {
   width: 100%;
   // position: fixed;
@@ -212,10 +178,20 @@
   padding: .5rem 0;
 }
 
-// .header__hamburger {
-//   width: 80px;
-//   height: 80px;
-// }
+.header__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint(lg) {
+    overflow: visible;
+  }
+}
+
+.header__logo {
+  max-width: clamp(150px, 20vw, 200px);
+}
 
 .header__mobile-nav {
   position: absolute;
@@ -243,8 +219,7 @@
   list-style-type: none;
 }
 
-.header__mobile-nav-link,
-.header__mobile-dropdown-link {
+.header__mobile-nav-link {
   text-decoration: none;
   padding: 1rem 0;
   display: block;
@@ -264,33 +239,6 @@
   color: #1d1d1d;
 }
 
-.header__mobile-dropdown-link {
-  font-size: $ic-100; 
-  padding: 0 0 $ic--200 0;
-  color: rgba(#1d1d1d, .8);
-}
-
-.header__mobile-dropdown {
-  display: none;
-  padding: 0 1rem;
-}
-
-.has-dropdown-open .header__mobile-nav-inner {
-  max-height: 650px;
-  overflow: auto;
-}
-
-.mobile-dropdown-open {
-  border-bottom: 1px solid rgba(#f6f6f6, 0.1);
-
-  .parent {
-    border-bottom: none;
-  }
-
-  .header__mobile-dropdown {
-    display: block;
-  }
-}
 
 .header__mobile-nav-menu {
   max-width: 600px;
@@ -298,27 +246,11 @@
   padding: 1.5rem;
 }
 
-.header__wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @include breakpoint(lg) {
-    overflow: visible;
-  }
-}
-
-.header__logo {
-  max-width: clamp(150px, 20vw, 200px);
-}
-
 .header__nav {
   display: none;
 
   @include breakpoint(md) {
     display: flex; 
-    width: 100%;
   }
 }
 
@@ -326,13 +258,20 @@
   display: none;
 
   @include breakpoint(md) {
-    position: static;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    transition: 0.3s ease-in-out;
     padding: 0;
     margin: 0;
+  }
+}
+
+.header__nav-list-item {
+  position: relative;
+
+  @include breakpoint(md) {
+    list-style-type: none;
+    margin-top: 0;
+    padding: $ic-100 $ic-200;
+    display: inline-block;
   }
 }
 
@@ -340,7 +279,7 @@
   position: relative;
   text-decoration: none;
   // font-family: $secondary-font;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding: $ic--200 0;
   transition: .3s ease-out;
   color: #1d1d1d;
@@ -371,40 +310,8 @@
   }
 }
 
-.header__nav-list-item {
-  position: relative;
-
-  @include breakpoint(md) {
-    position: static;
-    list-style-type: none;
-    margin-top: 0;
-    padding: $ic-100 $ic-200;
-    display: inline-block;
-  }
-}
-
 .header__nav-list-item:last-of-type {
   padding-right: 0;
-}
-
-.header__nav-list-link {
-
-  @include breakpoint(md) {
-    text-decoration: none;
-    color: #1d1d1d;
-    // font-family: $secondary-font;
-    font-size: 1.2rem;
-    transition: .3s ease-in-out;
-    
-    &:hover,
-    &:focus {
-      color: #cd1f40;
-
-      .header__sub-menu-indicator {
-        transform: rotate(180deg);
-      }
-    }
-  }
 }
 
 .nav-open {
@@ -412,73 +319,4 @@
   opacity: 1;
   overflow: hidden;
   visibility: visible;
-}
-
-.toggle-mobile-dropdown {
-  position: absolute;
-  top: 16px;
-  right: 0;
-  height: $ic-400;
-  width: $ic-600;
-  background: none;
-  border: none;
-  border-left: 1px solid $light-gray;
-
-  &::before,
-  &::after {
-    content: "";
-    width: 1rem;
-    height: 2px;
-    background-color: $primary-color;
-    position: absolute;
-    transition: 0.3s ease;
-    top: 50%;
-    right: 30%;
-    transform: translate(-30%, -30%);
-  }
-
-  &::before {
-      transform: translate(-30%, -30%) rotate(90deg);
-  }
-}
-
-.mobile-dropdown-open .toggle-mobile-dropdown {
-  &::before {
-    transform: translate(-30%, -30%) rotate(0deg);
-  }
-}
-
-.collapse {
-  @include breakpoint(md) {
-    animation: collapse 0.5s ease forwards;
-  }
-}
-
-// Open nav bar on scroll up
-.expand {
-  @include breakpoint(md) {
-    animation: expand 0.5s ease forwards;
-  }
-}
-
-@keyframes collapse {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes expand {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

@@ -7,7 +7,7 @@ seo:
   featured_image_alt:
 hero:
   heading: HTML & CSS Navbar Components
-  body: (Mostly)Ready to use navbar components, copy-paste HTML & CSS components and build your awesome website. Use this to kickstart your component and customize to meet your needs.
+  body: (Mostly)Ready to use navbar components. Copy-paste HTML & CSS components and build your awesome website. Use this to kickstart your component and customize to meet your needs.
   hero_image:
     image: /uploads/featured-image.jpg
     image_alt:
