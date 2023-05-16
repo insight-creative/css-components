@@ -1,7 +1,7 @@
 ---
-title: Navbar Right
+title: Navbar Centered
 component: "navbars"
-date: 2022-05-04
+date: 2022-05-03
 seo:
   page_title:
   meta_description:
@@ -15,7 +15,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <header class="header">
+    <header class="header header--centered">
       <div class="header__wrapper wrapper-lg">
         <div class="header__logo">
           <span class="visually-hidden">Home</span>
@@ -23,25 +23,30 @@ html_example:
               <img src="/uploads/Insight-Logo-White.png" width="164" height="141" alt="">
           </a>
         </div>
-        <nav class="header__nav" aria-label="primary navigation">
-          <ul class="header__nav-list">
-              <li class="header__nav-list-item">
-                <a class="header__nav-list-link" href="/services/" aria-label="Services">
-                    Services
-                </a>
-              </li>
-              <li class="header__nav-list-item">
-                <a class="header__nav-list-link" href="/about/" aria-label="About">
-                    About
-                </a>
-              </li>
-              <li class="header__nav-list-item">
-                <a class="header__nav-list-link" href="/contact/" aria-label="Contact">
-                    Contact
-                </a>
-              </li>
-          </ul>
-        </nav>
+        <div class="header__middle">        
+          <nav class="header__nav" aria-label="primary navigation">
+            <ul class="header__nav-list">
+                <li class="header__nav-list-item">
+                  <a class="header__nav-list-link" href="/services/" aria-label="Services">
+                      Services
+                  </a>
+                </li>
+                <li class="header__nav-list-item">
+                  <a class="header__nav-list-link" href="/about/" aria-label="About">
+                      About
+                  </a>
+                </li>
+                <li class="header__nav-list-item">
+                  <a class="header__nav-list-link" href="/contact/" aria-label="Contact">
+                      Contact
+                  </a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__end">
+            <a class="btn btn--primary" href="#">Let's Talk</a>
+        </div>
         <div id="header__mobile-nav" class="header__mobile-nav">
           <div class="header__mobile-nav-inner">
             <ul class="header__mobile-nav-menu">
@@ -163,14 +168,6 @@ css_example:
       max-width: 600px;
       margin: 0 auto;
       padding: 1.5rem;
-    }
-
-    .header__nav {
-      display: none;
-
-      @include breakpoint(md) {
-        display: flex; 
-      }
     }
 
     .header__nav-list {

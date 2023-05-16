@@ -1,7 +1,7 @@
 ---
-title: Navbar Right
+title: Navbar Left
 component: "navbars"
-date: 2022-05-04
+date: 2022-05-02
 seo:
   page_title:
   meta_description:
@@ -15,7 +15,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <header class="header">
+    <header class="header header--left">
       <div class="header__wrapper wrapper-lg">
         <div class="header__logo">
           <span class="visually-hidden">Home</span>
@@ -165,11 +165,12 @@ css_example:
       padding: 1.5rem;
     }
 
-    .header__nav {
+    .header--left .header__nav {
       display: none;
 
       @include breakpoint(md) {
         display: flex; 
+        margin-right: auto;
       }
     }
 

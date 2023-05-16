@@ -1,7 +1,7 @@
 ---
-title: Navbar Right
+title: Navbar With Secondary Nav
 component: "navbars"
-date: 2022-05-04
+date: 2022-05-01
 seo:
   page_title:
   meta_description:
@@ -15,7 +15,19 @@ hero:
     image_alt:
 html_example:
   - |
-    <header class="header">
+    <header class="header header--with-secondary">
+      <div class="header__top bg-gray">
+        <div class="wrapper-lg">
+          <ul class="header__top-nav">
+            <li class="header__top-nav-item">
+              <a class="header__top-nav-link href="#">News</a>
+            </li>
+            <li class="header__top-nav-item">
+              <a class="header__top-nav-link" href="#">Tours</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="header__wrapper wrapper-lg">
         <div class="header__logo">
           <span class="visually-hidden">Home</span>
@@ -189,7 +201,7 @@ css_example:
       @include breakpoint(md) {
         list-style-type: none;
         margin-top: 0;
-        padding: $ic-100 $ic-200;
+        padding: 1rem 1.25rem;
         display: inline-block;
       }
     }
@@ -199,7 +211,7 @@ css_example:
       text-decoration: none;
       // font-family: $secondary-font;
       font-size: 1.2rem;
-      padding: $ic--200 0;
+      padding: .8rem 0;
       transition: .3s ease-out;
       color: #1d1d1d;
 
@@ -239,4 +251,55 @@ css_example:
       overflow: hidden;
       visibility: visible;
     }
+
+    // Start styles for header with secondary navigation
+    .header--with-secondary {
+      padding: 0;
+    }
+
+    .header__top {
+      display: none;
+
+      @include breakpoint(md) {
+        display: flex;
+      }
+    }
+
+    .header__top-nav {
+      display: flex;
+      max-width: fit-content;
+      margin-left: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: .3rem 0;
+
+      li:last-of-type {
+        padding: 0 0 0 1rem;
+      }
+    }
+
+    .header__top-nav-item {
+      list-style-type: none;
+      margin-top: 0;
+      padding: 0 1rem;
+    }
+
+    .header__top-nav-link {
+      color: #1d1d1d;
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 700;
+      transition: color .3s ease-in-out;
+
+      &:hover, 
+      &:focus {
+        color: #cd1f40;
+      }
+    }
+
+    .header--with-secondary .header__wrapper {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+    // End styles for header with secondary navigation
 ---
