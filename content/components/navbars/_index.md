@@ -1,16 +1,15 @@
 ---
-title: Navbar
+title: Navbars
 seo:
   page_title:
   meta_description:
-  featured_image: /uploads/featured-image.jpg
+  featured_image: /uploads/navbar-screenshot.jpg
   featured_image_alt:
 hero:
   heading: HTML & CSS Navbar Components
   body: (Mostly)Ready to use navbar components. Copy and paste these HTML & CSS components and build your awesome website. Use this to kickstart your component and customize to meet your needs.
-  hero_image:
-    image: /uploads/featured-image.jpg
-    image_alt:
+categories: 
+  - Application UI
 ---
 
 Some test content

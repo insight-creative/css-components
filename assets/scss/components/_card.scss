@@ -81,3 +81,16 @@
   width: 100%;
   content: "";
 }
+
+.card--component-preview {
+  background-color: $dark-black;
+}
+
+.card--component-preview .card__image-wrap {
+
+}
+
+.card--component-preview .cover-image img {
+  object-fit: contain;
+  padding: $ic-400;
+}

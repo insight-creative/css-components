@@ -27,6 +27,7 @@ module.exports = {
         'btn',
         'btn--secondary',
         'btn--category',
+        'btn--gradient',
         'hero',
         'flow',
         'mt-4',

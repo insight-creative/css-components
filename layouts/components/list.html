@@ -1,5 +1,15 @@
 {{ define "main" }}
 {{ partial "hero" . }}
+    {{ if eq .Title "CSS Components" }}
+    <div class="block bg-black-2">
+        <div class="wrapper-lg columns gap-md">
+            {{ $componentSection := .Site.GetPage "section" "components" }}
+            {{ range $componentSection.Sections }}
+                {{ .Render "component-card" }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
     {{ $currentPage := . }}
     {{ range $index, $page := .Pages }} <!-- Loop over the pages in the current section -->
         {{ $htmlExample := $page.Params.html_example }}

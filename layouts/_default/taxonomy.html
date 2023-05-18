@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "hero" . }}
+<div class="block bg-black-2">
+  <div class="wrapper-lg columns">
+    {{ range .Paginator.Pages.ByDate.Reverse }}
+      {{ .Render "component-card" }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

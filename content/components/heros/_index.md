@@ -3,7 +3,7 @@ title: Heros
 seo:
   page_title:
   meta_description:
-  featured_image: /uploads/featured-image.jpg
+  featured_image: /uploads/hero-screenshot.jpg
   featured_image_alt:
 hero:
   heading: HTML & CSS Hero Components
@@ -11,6 +11,8 @@ hero:
   hero_image:
     image: /uploads/featured-image.jpg
     image_alt:
+categories: 
+  - Marketing
 ---
 
 Some test content
