@@ -37,26 +37,26 @@ css_example:
         max-width: 30ch;
         margin-inline: auto;
         margin-block-start: 0;
-        transition: .3s ease-out;
-        background-color: #fff;
+        transition: $transition;
+        background-color: $white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
 
-        &:hover, 
-        &:focus {
-            transform: translateY(-10px);
+    &:hover, 
+    &:focus {
+        transform: translateY(-10px);
 
-            .card__overlay {
-                opacity: 1;
-            }
-
-            .card__img {
-                transform: scale(1.1);
-            }
-
-            .service-card__underline {
-                transform: scaleX(1.5);
-            }
+        .card__overlay {
+            opacity: 1;
         }
+
+        .card__img {
+        transform: scale(1.1);
+        }
+
+        .service-card__underline {
+            transform: scaleX(1.5);
+        }
+    }
     }
 
     .card::after {
@@ -66,27 +66,26 @@ css_example:
         content: "";
         width: 75%;
         height: 10px;
-        background-color: #92981b;
+        background-color: $secondary-color;
     }
 
     .card__meta {
         position: absolute;
         top: -18px;
         left: 0;
-        z-index: 2;
+        z-index: 8;
     }
 
     .card__image-wrap {
         position: relative;
         width: 100%;
-        height: 250px;
+        aspect-ratio: 3/2;
     }
 
-    .card__img {
-        block-size: 250px;
+        .card__img {
         inline-size: 100%;
         object-fit: cover;
-        transition: .3s ease-out;;
+        transition: $transition;
     }
 
     .card__overlay {
@@ -97,20 +96,20 @@ css_example:
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(109.95deg, rgba(0, 0, 0, 0.15) 0%, rgba(#cd1f40, 0.5) 100%);
+        background: linear-gradient(109.95deg, rgba(0, 0, 0, 0.15) 0%, rgba($primary-color, 0.5) 100%);
         opacity: 0;
         transition: opacity .3s ease-in-out;
     }
 
     .card__content {
-        padding: 1.25rem;
+        padding: $ic-200;
     }
 
     .card__link::after {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 7;
         height: 100%;
         width: 100%;
         content: "";

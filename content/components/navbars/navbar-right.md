@@ -91,8 +91,8 @@ css_example:
       top: 0;
       left: 0;
       z-index: 9;
-      transition: .3s ease-in-out;
-      background-color: #fff;
+      transition: $transition;
+      background-color: $white;
       box-shadow: 0 4px 8px rgba(0,0,0,.15);
       padding: .5rem 0;
     }
@@ -118,8 +118,8 @@ css_example:
       left: 0;
       width: 100%;
       overflow: hidden;
-      transition: .3s ease-in-out;
-      background-color: #fff;
+      transition: $transition;
+      background-color: $white;
       overflow: hidden;
       max-height: 0;
       transition: max-height .5s ease-in-out;
@@ -140,22 +140,19 @@ css_example:
 
     .header__mobile-nav-link {
       text-decoration: none;
-      padding: 1rem 0;
+      padding: $ic-100 0;
       display: block;
       width: 100%;
-      transition: color .3s ease-in-out;
-      // font-family: $secondary-font;
+      transition: color $transition;
+      font-family: $secondary-font;
+      font-size: $ic-200; 
+      border-bottom: 1px solid #f6f6f6;
+      color: $black;
 
       &:hover,
       &:focus {
-        color: #92981b;
+        color: $secondary-color;
       }
-    }
-
-    .header__mobile-nav-link {
-      font-size: 1.25rem; 
-      border-bottom: 1px solid #f6f6f6;
-      color: #1d1d1d;
     }
 
 
@@ -197,14 +194,14 @@ css_example:
     .header__nav-list-link {
       position: relative;
       text-decoration: none;
-      // font-family: $secondary-font;
-      font-size: 1.2rem;
-      padding: $ic--200 0;
-      transition: .3s ease-out;
-      color: #1d1d1d;
+      font-family: $secondary-font;
+      font-size: $ic-200;
+      padding: .8rem 0;
+      transition: $transition;
+      color: $black;
 
       &::after {
-        background: #92981b;
+        background: $secondary-color;
         height: 3px;
         width: 100%;
         transform: scaleX(0);
@@ -213,13 +210,13 @@ css_example:
         bottom: 0;
         left: 0;
         content: "";
-        transition: transform 0.4s ease-out;
+        transition: transform $transition;
       }
 
       @include breakpoint(md) {
         &:hover,
         &:focus {
-          color: #cd1f40;
+          color: $primary-color;
 
           &::after {
             transform: scaleX(1);

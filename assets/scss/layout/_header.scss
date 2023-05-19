@@ -221,22 +221,19 @@
 
 .header__mobile-nav-link {
   text-decoration: none;
-  padding: 1rem 0;
+  padding: $ic-100 0;
   display: block;
   width: 100%;
-  transition: color .3s ease-in-out;
-  // font-family: $secondary-font;
+  transition: color $transition;
+  font-family: $secondary-font;
+  font-size: $ic-200; 
+  border-bottom: 1px solid #f6f6f6;
+  color: $dark-black;
 
   &:hover,
   &:focus {
-    color: #92981b;
+    color: $secondary-color;
   }
-}
-
-.header__mobile-nav-link {
-  font-size: 1.25rem; 
-  border-bottom: 1px solid #f6f6f6;
-  color: #1d1d1d;
 }
 
 

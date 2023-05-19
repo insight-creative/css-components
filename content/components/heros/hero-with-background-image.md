@@ -14,7 +14,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <div class="hero hero--background-image">
+    <section class="hero hero--background-image" aria-labelledby="hero-heading">
       <div class="hero__image">
         <picture>
           <source sizes="100vw" srcset="" type="image/avif">
@@ -33,7 +33,7 @@ html_example:
           <a class="btn btn--primary" href="/contact/">Contact Us</a>
         </div>
       </div>
-    </div>
+    </section>
 css_example:
   - |
     .hero--background-image {
@@ -44,7 +44,7 @@ css_example:
 
     .hero--background-image::after {
       content: "";
-      background-color: rgba(0,0,0,.7);
+      background-color: rgba($black,.7);
       grid-area: 1/-1;
     }
 
