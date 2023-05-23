@@ -7,3 +7,33 @@
     margin-block: -75px;
     margin-inline: auto;
 }
+
+
+.testimonial__card {
+    padding: $ic-300;
+    // max-width: 40ch;
+    // border: 1px solid rgba($light-gray, .2);
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,.1);
+}
+
+.testimonial__card-image img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 5px solid $dark-black;
+    border-radius: 50%;
+}
+
+.testimonial--full .testimonial__icon {
+    margin: 0 auto;
+}
+
+.testimonial--full .testimonial__image img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 5px solid $white;
+    border-radius: 50%;
+    margin: 0 auto;
+}
