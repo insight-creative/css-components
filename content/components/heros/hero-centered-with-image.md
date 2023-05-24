@@ -17,7 +17,7 @@ html_example:
     <section class="hero--centered block" aria-labelledby="hero-heading">
         <div class="wrapper-sm text-align-center text-color-white flow gap-xl">
             <h1 id="hero-heading">Hero Heading</h1>
-            <div class="flow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="flow">Readymade quinoa ennui art party squid ascot beard umami before they sold out forage irony lumbersexual pop-up trust fund chillwave.</div>
             <a class="btn btn--primary" href="/contact/">Contact Us</a>
         </div>
         <div class="hero__image wrapper-md mt-4 p-relative">

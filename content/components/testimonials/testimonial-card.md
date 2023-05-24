@@ -22,7 +22,7 @@ html_example:
       <div class="wrapper-lg columns gap-sm">
         <div class="testimonial__card col flow bg-black-2">
           <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Eget dolor morbi non arcu risus quis varius."</p>
+          <p>"Roof party twee slow-carb brunch. Literally solarpunk 3 wolf moon, hammock ethical bruh four loko tacos air plant dreamcatcher readymade salvia."</p>
           <div class="flex gap-sm">
             <div class="testimonial__card-image">
               <img src="https://source.unsplash.com/random/100x100?face" alt="" width="50" height="50">
@@ -35,7 +35,7 @@ html_example:
         </div>
         <div class="testimonial__card col flow bg-black-2">
           <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Eget dolor morbi non arcu risus quis varius."</p>
+          <p>"Kickstarter trust fund bushwick ugh. Fingerstache sartorial ramps, beard cred organic fam DSA."</p>
           <div class="flex gap-sm">
             <div class="testimonial__card-image">
               <img src="https://source.unsplash.com/random/100x100?face" alt="" width="50" height="50">
@@ -48,7 +48,7 @@ html_example:
         </div>
         <div class="testimonial__card col flow bg-black-2">
           <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Eget dolor morbi non arcu risus quis varius."</p>
+          <p>"Sus 3 wolf moon small batch portland tumblr edison bulb art party. Seitan shoreditch chia cornhole stumptown vibecession next level PBR&B bodega boys neutra."</p>
           <div class="flex gap-sm">
             <div class="testimonial__card-image">
               <img src="https://source.unsplash.com/random/100x100?face" alt="" width="50" height="50">

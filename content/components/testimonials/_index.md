@@ -3,7 +3,7 @@ title: Testimonials
 seo:
   page_title:
   meta_description:
-  featured_image: /uploads/hero-screenshot.jpg
+  featured_image: /uploads/testimonial-screenshot.jpg
   featured_image_alt:
 hero:
   heading: HTML & CSS Testimonial Components

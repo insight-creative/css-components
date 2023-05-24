@@ -26,7 +26,7 @@ html_example:
         </div>
         <div class="card__content flow">
             <h3 class="h4"><a class="card__link no-decoration" href="#">Blog Title</a></h3>
-            <div class="card__summary font-size-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices neque ornare aenean euismod elementum.</div>
+            <div class="card__summary font-size-xs">Poke aesthetic street art post-ironic intelligentsia meditation, live-edge activated charcoal vexillologist pickled. Ramps Brooklyn truffaut, tattooed you probably haven't heard of them cred keffiyeh.</div>
         </div>
     </article>
 css_example:

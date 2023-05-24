@@ -18,7 +18,7 @@ html_example:
       <div class="hero__content col">
         <div class="wrapper-sm text-color-white flow">
           <h1 id="hero-heading">Hero Heading</h1>
-          <div class="flow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="flow">Ugh tilde lyft, praxis raclette cloud bread affogato cliche venmo poutine typewriter yuccie helvetica.</div>
           <a class="btn btn--primary" href="/contact/">Contact Us</a>
         </div>
       </div>

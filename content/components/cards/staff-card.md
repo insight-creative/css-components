@@ -21,7 +21,7 @@ html_example:
         <div class="card__content flow">
             <h3 class="h4"><a class="card__link no-decoration" href="#">Archibald Northbottom</a></h3>
             <span class="text-style-slub">Speech impediment specialist</span>
-            <div class="card__summary font-size-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="card__summary font-size-xs">Raw denim hammock deep v fit dreamcatcher tbh pour-over same put a bird on it man braid praxis.</div>
         </div>
     </article>
 css_example:

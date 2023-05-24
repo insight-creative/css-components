@@ -18,7 +18,7 @@ html_example:
         <div class="wrapper-lg columns gap-xl">
             <div class="hero__content col flow">
                 <h1 class="hero__heading" id="hero-heading">Hero Heading</h1>
-                <div class="hero__body flow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="hero__body flow">Bitters kinfolk master cleanse celiac pug blue bottle kickstarter vice PBR&B tofu meditation flexitarian polaroid. Listicle hoodie venmo four dollar toast fanny pack pitchfork solarpunk single-origin coffee green juice.</div>
                 <a class="btn btn--primary" href="/contact/">Contact Us</a>
             </div>
             <div class="hero__image col p-relative">

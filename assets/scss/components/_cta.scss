@@ -1,48 +1,36 @@
-.cta {
-  // background-image: url("/uploads/cta-law-books.jpg");
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // padding: $ic-1000 0;
-  position: relative;
-  z-index: 2;
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: "";
-    background-color: rgba($dark-black, 0.8);
-    z-index: 3;
-  }
-
-  img {
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
+.cta--split .cta__image img {
+    aspect-ratio: 3/2;
     width: 100%;
     height: 100%;
-    z-index: 1;
-  }
-
-  &__content {
-    padding: $ic-1000 0;
-    position: relative;
-    z-index: 4;
-  }
+    object-fit: cover;
 }
 
-.practice-areas .cta {
-  margin-top: $ic-900;
+.cta--with-image .cta__image img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
 }
 
-.legal-resources,
-.our-team {
-  .cta-wrapper {
-    background-color: $light-gray;
-  }
+.cta--full-background-image {
+  display: grid;
+}
+
+.cta--full-background-image > * {
+  grid-area: 1/-1;
+}
+
+.cta--full-background-image .cta__content {
+  z-index: 3;
+}
+
+.cta--full-background-image .cta__overlay {
+  z-index: 2;
+  background-color: rgba(0,0,0,.6);
+}
+
+.cta--full-background-image .cta__image {
+  z-index: 1;
 }

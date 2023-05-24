@@ -29,7 +29,7 @@ html_example:
       <div class="hero__content">
         <div class="wrapper-sm text-color-white text-align-center flow">
           <h1 id="hero-heading">Hero Heading</h1>
-          <div class="flow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="flow">Echo park wayfarers art party wolf. Put a bird on it Brooklyn wayfarers everyday carry succulents, fixie palo santo. Solarpunk kogi godard fit, wayfarers cold-pressed ascot artisan waistcoat.</div>
           <a class="btn btn--primary" href="/contact/">Contact Us</a>
         </div>
       </div>

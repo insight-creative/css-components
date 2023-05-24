@@ -23,7 +23,7 @@ html_example:
           <div class="testimonial__content margin-block-auto col block flow">
               <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
               <div class="flow">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Eget dolor morbi non arcu risus quis varius."</p>
+                <p>"Church-key gluten-free fixie cliche. Tilde taxidermy kitsch meditation bodega boys photo booth subway tile 3 wolf moon."</p>
                 <div>
                   <span>Max Conversion</span><br>
                   <span class="text-style-slub">SEO Expert</span>
