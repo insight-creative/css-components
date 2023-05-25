@@ -1,7 +1,7 @@
 ---
-title: Navbar Right
-component: "navbars"
-date: 2022-05-04
+title: Header Left
+component: "headers"
+date: 2022-05-02
 seo:
   page_title:
   meta_description:
@@ -15,7 +15,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <header class="header">
+    <header class="header header--left">
       <div class="header__wrapper wrapper-lg">
         <div class="header__logo">
           <span class="visually-hidden">Home</span>
@@ -155,18 +155,18 @@ css_example:
       }
     }
 
-
     .header__mobile-nav-menu {
       max-width: 600px;
       margin: 0 auto;
       padding: 1.5rem;
     }
 
-    .header__nav {
+    .header--left .header__nav {
       display: none;
 
       @include breakpoint(md) {
         display: flex; 
+        margin-right: auto;
       }
     }
 
@@ -196,8 +196,8 @@ css_example:
       text-decoration: none;
       font-family: $secondary-font;
       font-size: $ic-200;
-      padding: .8rem 0;
-      transition: $transition;
+      padding: $ic--200 0;
+      transition: .3s ease-out;
       color: $black;
 
       &::after {
@@ -210,7 +210,7 @@ css_example:
         bottom: 0;
         left: 0;
         content: "";
-        transition: transform $transition;
+        transition: transform 0.4s ease-out;
       }
 
       @include breakpoint(md) {
