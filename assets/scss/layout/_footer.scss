@@ -16,13 +16,11 @@
 .footer__logo {
   display: block;
   max-width: 200px;
-  margin-inline: auto;
 }
 
 .footer__nav-item {
   list-style-type: none;
   margin-top: 0;
-  padding: $ic-100; 
 }
 
 .footer__copyright {
@@ -55,6 +53,22 @@
   padding-block: $ic-300;
 }
 
+.footer--centered .footer__logo {
+  margin-inline: auto;
+}
+
 .footer--centered .footer__bottom {
   border-top: 1px solid $body-black;
+}
+
+.footer--centered .footer__nav {
+  padding-block: $ic-400;
+}
+
+.footer--centered .footer__nav-item {
+  padding: $ic-100; 
+}
+
+.footer--four-column .footer__nav-item + .footer__nav-item {
+  margin-top: .5rem;
 }

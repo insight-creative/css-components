@@ -1,7 +1,7 @@
 ---
 title: Footer Simple
 component: "footers"
-date: 2022-05-03
+date: 2022-05-01
 seo:
   page_title:
   meta_description:

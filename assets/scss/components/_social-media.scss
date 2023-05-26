@@ -1,36 +1,30 @@
-.social {
+.footer__social-list {
   margin: 0;
   padding: 0;
-
-  li {
-    list-style-type: none;
-    margin: 0;
-  }
 
   .facebook-icon {
     top: -3px;
   }
+}
 
-  &__icon {
-    position: relative;
-    padding: $ic--200;
-    margin: 0 5px;
+.footer__social-icon {
+  position: relative;
+  margin: 0 5px;
 
-    svg {
-      width: $ic-300;
-      height: $ic-300;
-      fill: $primary-color;
-    }
-
-    &:hover,
-    &:focus {
-      &::before {
-        opacity: 1;
-      }
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 1;
     }
   }
+}
 
-  &__list-item:first-of-type a {
-    padding-left: 0;
-  }
+.footer__social-item {
+  list-style-type: none;
+  margin: 0;
+  padding-inline: $ic-100;
+}
+
+.footer__social-item:first-of-type a {
+  padding-left: 0;
 }
