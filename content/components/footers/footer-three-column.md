@@ -15,10 +15,10 @@ hero:
     image_alt:
 html_example:
   - |
-    <footer class="footer footer--four-column">
+    <footer class="footer footer--three-column">
       <div class="footer__columns wrapper-lg">
-        <div class="block-sm grid">
-          <div class="grid-6 grid-4-md">
+        <div class="block-sm grid gap-lg">
+          <div class="grid-12 grid-4-md">
             <a class="footer__logo" href="/">
               <img src="/uploads/Insight-Logo-White.png" width="164" height="141" alt="">
             </a>
@@ -33,38 +33,69 @@ html_example:
                 <span class="icon-sm icon-fill-primary">
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>
                 </span>
-                <a href="tel:920-918-6800" class="ml-1 font-size-xs">920-918-6800</a>
+                <a href="tel:920-468-7459" class="ml-1 font-size-xs">920-468-7459</a>
               </p>
             </address>
           </div>
-          <div class="grid-6 grid-4-md">
-            <h2 class="h5">Links</h2>
-            <nav aria-label="Footer Navigation">
-              <ul class="footer__nav">
-                <li class="footer__nav-item">
-                  <a class="footer__nav-link font-size-xs" href="/services/" aria-label="Services">
-                    Services
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a class="footer__nav-link font-size-xs" href="/about/" aria-label="About">
-                    About
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a class="footer__nav-link font-size-xs" href="/blog/" aria-label="Blog">
-                    Blog
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a class="footer__nav-link font-size-xs" href="/contact/" aria-label="Contact">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </nav>
+          <div class="grid-12 grid-5-md">
+            <div class="grid gap-sm">
+              <div class="grid-6">
+                <h2 class="h5">Links</h2>
+                <nav aria-label="Footer Navigation">
+                  <ul class="footer__nav">
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/services/" aria-label="Services">
+                        Services
+                      </a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/about/" aria-label="About">
+                        About
+                      </a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/blog/" aria-label="Blog">
+                        Blog
+                      </a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/contact/" aria-label="Contact">
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="grid-6">
+                <h2 class="h5">Links</h2>
+                <nav aria-label="Footer Navigation">
+                  <ul class="footer__nav">
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/services/" aria-label="Services">
+                        Services
+                      </a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/about/" aria-label="About">
+                        About
+                      </a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/blog/" aria-label="Blog">
+                        Blog
+                      </a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link font-size-xs" href="/contact/" aria-label="Contact">
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
           </div>
-          <div class="grid-6 grid-4-md">
+          <div class="grid-12 grid-3-md">
             <h2 class="h5">Connect With Us</h2>
             <div class="footer__social">
               <ul class="footer__social-list flex flex-center">
@@ -136,6 +167,17 @@ css_example:
       padding: $ic-100; 
     }
 
+    .footer__social-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer__social-item {
+      list-style-type: none;
+      margin: 0;
+      padding-inline-end: $ic-200;
+    }
+
     .footer__copyright {
       font-size: $ic--100;
       padding: $ic-100 0;
@@ -160,9 +202,5 @@ css_example:
       @include breakpoint(md)  {
         margin: 0 0 0 $ic--100;
       }
-    }
-
-    .footer--four-column .footer__nav-item + .footer__nav-item {
-      margin-top: .5rem;
     }
 ---

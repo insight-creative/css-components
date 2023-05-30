@@ -111,6 +111,17 @@ css_example:
       padding: $ic-100; 
     }
 
+    .footer__social-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer__social-item {
+      list-style-type: none;
+      margin: 0;
+      padding-inline-end: $ic-200;
+    }
+
     .footer__copyright {
       font-size: $ic--100;
       padding: $ic-100 0;
