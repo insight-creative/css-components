@@ -3,7 +3,7 @@ title: Footers
 seo:
   page_title:
   meta_description:
-  featured_image: /uploads/navbar-screenshot.jpg
+  featured_image: /uploads/footer-screenshot.jpg
   featured_image_alt:
 hero:
   heading: HTML & CSS Footer Components
