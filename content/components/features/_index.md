@@ -3,7 +3,7 @@ title: Feature Blocks
 seo:
   page_title:
   meta_description:
-  featured_image: /uploads/features-screenshot.jpg
+  featured_image: /uploads/feature-screenshot.jpg
   featured_image_alt:
 hero:
   heading: HTML & CSS Feature Blocks
