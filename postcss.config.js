@@ -35,6 +35,7 @@ module.exports = {
         'hero--image',
         'text-style-slub',
         'header__hamburger',
+        'icon-sm',
       ],
     }),
   ],

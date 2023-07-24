@@ -1,3 +1,7 @@
+.gap-xs {
+  gap: .5rem;
+}
+
 .gap-sm {
   gap: clamp($ic--200, 5vw, $ic-200);
 }
