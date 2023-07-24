@@ -20,9 +20,11 @@ html_example:
         <h2 class="testimonial__heading" id="testimonial-heading">What Our Clients Are Saying</h2>
       </div>
       <div class="wrapper-lg columns gap-sm">
-        <div class="testimonial__card col flow bg-black-2">
-          <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
-          <p>"Roof party twee slow-carb brunch. Literally solarpunk 3 wolf moon, hammock ethical bruh four loko tacos air plant dreamcatcher readymade salvia."</p>
+        <div class="testimonial__card col flex flex-column flex-justify-between flow bg-black-2">
+          <div class="flow">
+            <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
+            <p>"Roof party twee slow-carb brunch. Literally solarpunk 3 wolf moon, hammock ethical bruh four loko tacos air plant dreamcatcher readymade salvia."</p>
+          </div>
           <div class="flex gap-sm">
             <div class="testimonial__card-image">
               <img src="https://source.unsplash.com/random/100x100?face" alt="" width="50" height="50">
@@ -33,9 +35,11 @@ html_example:
             </div>
           </div>
         </div>
-        <div class="testimonial__card col flow bg-black-2">
-          <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
-          <p>"Kickstarter trust fund bushwick ugh. Fingerstache sartorial ramps, beard cred organic fam DSA."</p>
+        <div class="testimonial__card col flex flex-column flex-justify-between flow bg-black-2">
+          <div class="flow">
+            <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
+            <p>"Kickstarter trust fund bushwick ugh. Fingerstache sartorial ramps, beard cred organic fam DSA."</p>
+          </div>
           <div class="flex gap-sm">
             <div class="testimonial__card-image">
               <img src="https://source.unsplash.com/random/100x100?face" alt="" width="50" height="50">
@@ -46,9 +50,11 @@ html_example:
             </div>
           </div>
         </div>
-        <div class="testimonial__card col flow bg-black-2">
-          <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
-          <p>"Sus 3 wolf moon small batch portland tumblr edison bulb art party. Seitan shoreditch chia cornhole stumptown vibecession next level PBR&B bodega boys neutra."</p>
+        <div class="testimonial__card col flex flex-column flex-justify-between flow bg-black-2">
+          <div class="flow">
+            <h3 class="h4" id="testimonial-heading">Testimonial Heading</h3>
+            <p>"Sus 3 wolf moon small batch portland tumblr edison bulb art party. Seitan shoreditch chia cornhole stumptown vibecession next level PBR&B bodega boys neutra."</p>
+          </div>
           <div class="flex gap-sm">
             <div class="testimonial__card-image">
               <img src="https://source.unsplash.com/random/100x100?face" alt="" width="50" height="50">
