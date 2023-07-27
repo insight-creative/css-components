@@ -160,3 +160,49 @@ button {
   margin-left: .5rem;
   transition: .3s ease-in-out;
 }
+
+.btn--split {
+  display: flex;
+  font-size: .75rem;
+  padding: $ic-100 $ic-400;
+  border: none;
+  color: $primary-color;
+  background-color: $body-black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(100% + 3px);
+    background-color: $primary-color;
+    height: 100%;
+    aspect-ratio: 1/1;
+    transition: $transition;
+  }
+
+  &:hover,
+  &:focus {
+    .btn__icon {
+      transform: translateX(8px);
+    }
+
+    &::after {
+      transform: translateX(8px) rotate(45deg);
+    }
+  }
+}
+
+.btn__icon {
+  position: absolute;
+  left: calc(100% + 18px);
+  z-index: 1;
+  transition: $transition;
+}
+
+.btn--slanted {
+  clip-path: polygon(5% 0%,100% 0%,95% 100%,0% 100%);
+}
+
+.btn--rounded {
+  border-radius: 50px;
+}

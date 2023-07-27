@@ -3,17 +3,91 @@ blockquote {
   border-left: 6px solid $primary-color;
   padding: $ic-300;
   margin: 0;
+}
 
-  p + p {
-    margin-top: $ic-200;
-  }
+blockquote p + p {
+  margin-block-start: $ic-200;
+}
 
-  cite {
-    font-size: 1rem;
-    font-weight: 700;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: .8;
-  }
+blockquote cite {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: .8;
+  margin-block-start: $ic-200;
+}
+
+blockquote.blockquote--2 {
+  background: $body-black;
+  color: $light-gray;
+  padding: $ic-300;
+  position: relative;
+  margin: $ic-500 0;
+  outline: 1px solid rgba(246,246,246,.2);
+  outline-offset: -20px;
+  border: none;
+}
+
+blockquote.blockquote--2 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  opacity: .03;
+}
+
+blockquote.blockquote--2 p {
+  padding: $ic-300;
+}
+
+blockquote.blockquote--2 p + p {
+  margin-block-start: $ic-200;
+}
+
+blockquote.blockquote--2 cite {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: .8;
+  margin-block-start: 0;
+  padding-inline: $ic-300;
+  padding-block-end: $ic-300;
+}
+
+blockquote.blockquote--3 {
+  position: relative;
+  background-color: $light-gray;
+  border-left: 6px solid $primary-color;
+  padding: $ic-300;
+  margin: 0;
+}
+
+blockquote.blockquote--3 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  opacity: .03;
+}
+
+blockquote.blockquote--3 p + p {
+  margin-block-start: $ic-200;
+}
+
+blockquote.blockquote--3 cite {
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: .8;
+  margin-block-start: $ic-200;
 }
