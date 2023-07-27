@@ -1,32 +1,56 @@
 .logo-grid {
     display: grid;
-  
-    &__item {
-        margin: 0;
-        list-style-type: none;
-    }
-  
-    &__link {
-        border-right: 1px solid #f6f6f6;
-        border-bottom: 1px solid #f6f6f6;
-        display: grid;
-        place-items: center;
-        height: 150px;
-    }
-     
-    @include breakpoint(sm) {
-        grid-template-columns: repeat(2,1fr);
-  
-        .logo-grid__item:nth-child(even) .logo-grid__link {
-        border-right: none;
-        }
-    }
-  
+    grid-template-columns: repeat(2, 1fr);
+
     @include breakpoint(md) {
-        grid-template-columns: repeat(4,1fr);
-  
-        .logo-grid__item:nth-child(4n) .logo-grid__link {
-            border-right: none;
-        }
+        grid-template-columns: repeat(4, 1fr);
     }
+}
+
+.brand-card {
+    display: grid;
+    place-items: center;
+    height: 150px;
+}
+
+.brand-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    max-height: 75px;
+
+    @include breakpoint(md) { 
+        max-width: 225px;
+        max-height: 100px;
+    }
+}
+
+.logo-grid--bordered-dividers .brand-card {
+    border-right: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+}
+
+@media (max-width: 62em) {
+    .logo-grid--bordered-dividers li:nth-child(even) .brand-card {
+        border-right: none;
+    }
+}
+// adjust numbers here depending on the number of logos
+.logo-grid--bordered-dividers li:nth-child(n+7):nth-child(-n+8) .brand-card {
+    border-bottom: none;
+}
+
+@include breakpoint(md) {
+    .logo-grid--bordered-dividers li:nth-child(4n) .brand-card {
+        border-right: none;
+    }
+    
+    // adjust numbers here depending on the number of logos
+    .logo-grid--bordered-dividers li:nth-child(n+5):nth-child(-n+8) .brand-card {
+        border-bottom: none;
+    }
+}
+
+.logo-grid--bordered-logo .brand-card {
+    border: 2px solid rgba($light-gray, .3);
 }
