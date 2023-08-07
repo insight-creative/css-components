@@ -54,3 +54,37 @@
 .logo-grid--bordered-logo .brand-card {
     border: 2px solid rgba($light-gray, .3);
 }
+
+.logo-cloud__body {
+    padding: $ic-600;
+}
+
+.logo-cloud--split .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $ic-200;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.logo-cloud--split .brand-card {
+    display: grid;
+    place-items: center;
+    height: 100px;
+}
+
+.logo-cloud--simple .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $ic-400;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
