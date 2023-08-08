@@ -6,6 +6,7 @@ seo:
   meta_description:
   featured_image: /uploads/featured-image.jpg
   featured_image_alt:
+date: 2022-05-04
 hero:
   heading:
   body:
