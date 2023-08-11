@@ -92,34 +92,3 @@
     color: $secondary-color;
     z-index: 9;
 }
-
-.blog-back a {
-    text-decoration: none;
-    color: $white;
-}
-
-.blog-back a:hover,
-.blog-back a:focus {
-    color: $secondary-color;
-}
-
-.blog-back a:hover .icon-md,
-.blog-back a:focus .icon-md {
-    transform: translateX(-4px);
-}
-
-.blog-back a:hover svg,
-.blog-back a:focus svg {
-    fill: $secondary-color;
-}
-
-.blog-back .icon-md {
-    position: relative;
-    top: -1px;
-    margin-right: 4px;
-}
-
-.blog-back .icon-md,
-.blog-back svg {
-    transition: .3s ease-in-out;
-}

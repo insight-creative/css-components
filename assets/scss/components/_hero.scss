@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  background: #fff;
   display: grid;
 
   > * {
@@ -131,4 +130,72 @@
   margin-inline: -50px;
   box-shadow: 0 30px 30px -15px rgba(0,0,0,.25);
   margin-top: $ic-600;
+}
+
+.hero--event .back {
+  transform: translateY(-100px);
+}
+
+.hero--event .hero__image img {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__animation {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.rings {
+  position: absolute;
+  z-index: 1;
+}
+
+.rings--interior {
+  height: 100vw;
+  width: 100vw;
+  top: 50%;
+  right: 0;
+  transform: translateX(25%);
+
+  @include breakpoint(md) {
+    height: 400px;
+    width: 400px;
+    top: 75px;
+  }
+}
+
+.rings::before, 
+.rings::after {
+  height: 100%;
+  width: 100%;
+  border: 2px solid $primary-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  border-radius: 100%;
+  animation: 20s linear infinite forwards rotation;
+}
+
+.rings::before {
+  transform-origin: 48% 48%;
+}
+
+.rings::after {
+  transform-origin: 52% 52%;
+  animation-delay: 2s;
+}
+
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }

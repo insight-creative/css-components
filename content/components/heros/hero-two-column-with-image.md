@@ -14,7 +14,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <section class="hero hero--image block" aria-labelledby="hero-heading">
+    <section class="hero hero--image block bg-white" aria-labelledby="hero-heading">
         <div class="wrapper-lg columns gap-xl">
             <div class="hero__content col flow">
                 <h1 class="hero__heading" id="hero-heading">Hero Heading</h1>

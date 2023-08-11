@@ -15,7 +15,7 @@ hero:
     image_alt:
 html_example:
   - |
-    <div class="blog-back">
+    <div class="back">
         <a class="flex flex-center" href="/blog/">
             <div class="icon-md icon-fill-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>

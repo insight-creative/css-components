@@ -1,0 +1,30 @@
+.back a {
+    text-decoration: none;
+    color: $white;
+}
+
+.back a:hover,
+.back a:focus {
+    color: $secondary-color;
+}
+
+.back a:hover .icon-md,
+.back a:focus .icon-md {
+    transform: translateX(-4px);
+}
+
+.back a:hover svg,
+.back a:focus svg {
+    fill: $secondary-color;
+}
+
+.back .icon-md {
+    position: relative;
+    top: -1px;
+    margin-right: 4px;
+}
+
+.back .icon-md,
+.back svg {
+    transition: .3s ease-in-out;
+}

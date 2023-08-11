@@ -34,3 +34,9 @@
 .cta--full-background-image .cta__image {
   z-index: 1;
 }
+
+@include breakpoint(md) {
+  .cta--overlap-card .cta__content {
+    transform: translateX(100px);
+  }
+}
